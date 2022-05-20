@@ -28,9 +28,7 @@ function fetchPokemon(id) {
     .then(res => res.json())
     .then(data => {
         allGlobalPokemon.push(data);
-        // console.log(allGlobalPokemon.push(data));
         createPokemon(data);
-        // console.log(createPokemon(data));
     });
 }
 
@@ -72,9 +70,6 @@ function createPokemon(pokemon) {
 
     const sprite = document.createElement('img');
     sprite.src = pokemon.sprites.front_default;
-
-
-
     spriteContainer.appendChild(sprite);
 
     const number = document.createElement('p');
@@ -101,7 +96,7 @@ function createPokemon(pokemon) {
 
 function progressBars(stats, weights) {
     const statsContainer = document.createElement("div");
-    statsContainer.classList.add("stats-container"); //class=""
+    statsContainer.classList.add("stats-container");
 
     for (let i = 0; i < 4; i++) {
         const stat = stats[i]; 
@@ -126,7 +121,6 @@ function progressBars(stats, weights) {
             progressBar.setAttribute("aria-valuemin", 0);
             progressBar.setAttribute("aria-valuemax", 200);
             progressBar.style.with = statPercent;
-
             progressBar.textContent = stat.base_stat;
         }else if(i==3){
             progressBar.setAttribute("aria-valuenow", weight);
@@ -142,8 +136,6 @@ function progressBars(stats, weights) {
         statContainer.appendChild(progress);
         statsContainer.appendChild(statContainer);
     }
-    
-    console.log(weights);
     return statsContainer;
 }
 
