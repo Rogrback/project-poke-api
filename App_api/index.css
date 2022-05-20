@@ -1,19 +1,24 @@
-body {
-    background: rgb(85, 144, 189);
-    background: linear-gradient(
-      90deg,
-      rgba(85, 144, 189, 1) 0%,
-      rgba(108, 183, 240, 1) 54%,
-      rgba(182, 216, 242, 1) 82%
-    );
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: "Oswald", sans-serif;
-  }
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(93, 214, 214);
+  background-image: url(./img/blue-circle.png), url(./img/blue-circle.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 70vw bottom 75vh, left 65vw top 45vh;
+  background-size: 65%;
+  justify-content: center;
+}
   
-  h1 {
-    color: white;
-  }
+header {
+  margin-bottom: 16px;
+  padding-top: 8px;
+}
+.logo {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
   
   .pokemon-container {
     display: grid;
@@ -23,21 +28,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    margin-top: 20px;
-  }
+    margin-top: 40px;
+    justify-content: space-between;
+    }
   
-  .pokemon-block,
-  .pokemon-block-back {
+  .pokemon-block, .pokemon-block-back {
     border-radius: 10px;
     padding: 10px;
     background-color: white;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-  }
-  
-  .img-container {
-    background-image: url("./blob.svg");
+    background-image: url(./img/pokemon-1536847_1280.png);
+    background-size: 55%;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   .pokemon-block p {
@@ -45,9 +48,11 @@ body {
   }
   
   .name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 100%;
+    color: rgb(170, 9, 31);
   }
   
   #spinner {
@@ -65,8 +70,7 @@ body {
   }
   
   .card-container {
-    position: relative;
-    width: 100%;
+    width: 75%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
@@ -94,4 +98,97 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(238, 131, 10);
+    text-size-adjust: 8px;
+  }
+
+  .page-item {
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+  }
+
+  @media screen and (min-width: 390px) {
+    .fondo {
+      background-image: url(./img/blue-circle.png), url(./img/blue-circle.png);
+      background-repeat: no-repeat;
+      background-position: right 70vw bottom 100vh, left 120vw top 110vh;
+      background-size: 100%;
+      justify-content: center;
+    }
+    .logo {
+      display: block;
+      margin: auto;
+      width: 80%;
+    }
+    .pokemon-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      justify-content: space-between;
+      }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 780px){
+    .fondo {
+      background-image: url(./img/blue-circle.png), url(./img/blue-circle.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: right 70vw bottom 95vh, left 65vw top 70vh;
+      background-size: 75%;
+      justify-content: center;
+    }
+    .logo {
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
+    .pokemon-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      justify-content: space-between;
+      }
+
+  }
+
+  @media screen and (min-width: 780px) {
+    .fondo {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(93, 214, 214);
+      background-image: url(./img/blue-circle.png), url(./img/blue-circle.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: right 70vw bottom 75vh, left 65vw top 45vh;
+      background-size: 65%;
+      justify-content: center;
+    }
+    .logo {
+      display: block;
+      margin: auto;
+      width: 40%;
+    }
+    .pokemon-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      justify-content: space-between;
+      }
+  
+    
   }
